@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      function App(){
+        
+        return (
+            <div className="container" style={{margin:"40px 20px", display:"flex", flexDirection:"column", alignItems:"center"}}>
+                <div className="image_box">
+                    <img src="data:image/png;base64,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" alt=""/>
+                </div>
+                <h2>SUBSCRIBE</h2>
+                <p>Subscribe to our newsletter & stay up to date!</p>
+                <div id="subscribe_box">
+                    <input type="email" name="email" id="emailInp" placeholder="john@joe.net" style={{borderRadius:"10px", backgroundColor:"lightgray", padding:"4px 6px"}}/>
+                    <button style={{margin:"15px", border:"none", color:"white", backgroundColor:"lightblue", padding:"6px 10px", borderRadius:"12px"}}>Subscribe</button>
+                </div>
+            </div>
+        )
+      }
+
+      const root=ReactDOM.createRoot(document.getElementById("root"))
+      root.render(<App/>)
+    </script>
+  </body>
+</html>
