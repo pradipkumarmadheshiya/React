@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const root=ReactDOM.createRoot(document.getElementById("root"))
+      function App(){
+        return (
+          <div id="container" style={{padding:"20px", fontFamily:"sans-serif"}}>
+            <div id="imageDiv">
+              <img src="Capture.JPG" alt="" style={{width:"100%"}}/>
+            </div>
+            <h1>Automatic Watch</h1>
+            <p>$350.00 USD</p>
+            <p style={{color:"gray"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum asperiores atque cumque et id ab eligendi cum est fugiat error nulla, quidem labore! Pariatur excepturi quae in dolore veritatis cum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, aliquam, sunt quae ex veritatis enim inventore esse error magni molestias quaerat ipsum quod eum debitis et, delectus commodi qui non.</p>
+            <hr/>
+            <h3 style={{color:"gold"}}>FEATURES</h3>
+            <table>
+              <tbody>
+                <tr style={{width:"400px"}}>
+                  <td>Chronograph</td>
+                  <td>Anti-magnetic</td>
+                </tr>
+                <tr>
+                  <td>Master chronometer certified</td>
+                  <td>Chronometer</td>
+                </tr>
+                <tr>
+                  <td>Tachymeter</td>
+                  <td>Small seconds</td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 style={{color:"gold"}}>PRODUCT DETAIL</h3>
+            <h4>Between lungs: <span style={{fontWeight:"400"}}>20 mm</span></h4>
+            <h4>Brecelet: <span style={{fontWeight:"400"}}>Leather strap</span></h4>
+            <h4>Case: <span style={{fontWeight:"400"}}>Steel</span></h4>
+            <h4>Case Diameter: <span style={{fontWeight:"400"}}>42 mm</span></h4>
+            <h4>Dial color: <span style={{fontWeight:"400"}}>Black</span></h4>
+            <h4>Crystal: <span style={{fontWeight:"400"}}>Domed, strach resistant sapphire crystal with anti-reflective treatment inside</span></h4>
+            <h4>Water resistent: <span style={{fontWeight:"400"}}>5 bar(50 meter / 167 meter</span></h4>
+            <button style={{width:"100%", backgroundColor:"black", color:"white", padding:"20px", fontWeight:"600"}}>ADD TO CART</button>
+            <p style={{textAlign:"center"}}>2-3 bussiness days delivery</p>
+          </div>
+        )
+      }
+      root.render(<App/>)
+    </script>
+  </body>
+</html>
