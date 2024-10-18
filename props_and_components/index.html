@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components in React</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    const root=ReactDOM.createRoot(document.getElementById("root"))
+    function App(){
+        function CardFun({num, heading, content}){
+            return (
+                <div className="card">
+                    <h4 className="num">{num}</h4>
+                    <h3>{heading}</h3>
+                    <p>{content}</p>
+                </div>
+            )
+        }
+        return (
+            <div id="container">
+                <h1>Getting started in <span>3 easy steps</span></h1>
+                <div id="box">
+                    <CardFun num="01" heading="Find your template" content="Every template is embedded within an iframe, so you can easily check what they look like and test the responsive behaviour."/>
+
+                    <CardFun num="02" heading="Copy the code" content="Click the code tab to see the actual source code of the template. Copy and paste it into your project and adjust it to your needs."/>
+
+                    <CardFun num="03" heading="Enjoy your free time" content="You've just saved yourself a bunch of time not building the same stuff over and over again. Enjoy your free time, and build business features."/>
+                </div>
+            </div>
+        )
+    }
+    root.render(<App/>)
+  </script>
+</body>
+</html>
