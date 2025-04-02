@@ -1,0 +1,13 @@
+form{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+form label{
+    display: flex;
+    gap: 6px;
+}
+.submitClass{
+    margin: auto;
+}
