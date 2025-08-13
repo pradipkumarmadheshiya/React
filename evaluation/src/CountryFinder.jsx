@@ -1,7 +1,11 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 function CountryFinder(){
-    const [data, setData]=useState("")
+    const [data, setData]=useState([])
+
+    useEffect(()=>{
+        fetchData()
+    },[])
 
     const fetchData=async()=>{
         try{
@@ -13,25 +17,24 @@ function CountryFinder(){
             console.log("error is:", error)
         }
     }
-    fetchData()
-
+    
     return(
         <div className="container">
             <h2>Country Finder</h2>
             <div className="box">
                     {
-                        // data.forEach((item)=>{
+                        data.map((item)=>(
                             <div className="card">
                                 <div className="image">
-                                    <img src={data[0]?.flags?.png} alt="" />
+                                    <img src={item?.flags?.png} alt="" />
                                 </div>
-                                <h3>{data[0]?.name?.common}</h3>
-                                <p>Population: {data[0]?.population}</p>
-                                <p>Region: {data[0]?.region}</p>
-                                <p>Capital: {data[0]?.capital}</p>
+                                <h3>{item?.name?.common}</h3>
+                                <p>Population: {item?.population}</p>
+                                <p>Region: {item?.region}</p>
+                                <p>Capital: {item?.capital}</p>
                                 <button>More details</button>
                             </div>
-                        // })
+                        ))
                     }
             </div>
         </div>
