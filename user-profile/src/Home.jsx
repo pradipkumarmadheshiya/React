@@ -2,8 +2,8 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>
-      
+    <div className='mt-6 ml-4'>
+      <p>Welcome to Home page</p>
     </div>
   )
 }
